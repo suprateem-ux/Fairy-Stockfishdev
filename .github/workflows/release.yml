@@ -5,6 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   windows:
@@ -16,9 +17,9 @@ jobs:
     steps:
       - uses: al-cheb/configure-pagefile-action@v1.4	
         with:	
-            minimum-size: 16GB
-            maximum-size: 16GB
-            disk-root: "C:"
+          minimum-size: 16GB
+          maximum-size: 16GB
+          disk-root: "C:"
 
       - uses: actions/checkout@v4
 
